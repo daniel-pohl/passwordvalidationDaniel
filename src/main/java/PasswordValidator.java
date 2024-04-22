@@ -64,4 +64,15 @@ public class PasswordValidator {
         }
         return wordList.contains(password);
     }
+    public static boolean containsSpecialCharacter(String password) {
+        boolean SpecialCharacter = false;
+
+        for (char ch : password.toCharArray()) {
+            if (!Character.isLetterOrDigit(ch)) {
+                SpecialCharacter = true;
+                break;
+            }
+        }
+        return SpecialCharacter;
+    }
 }

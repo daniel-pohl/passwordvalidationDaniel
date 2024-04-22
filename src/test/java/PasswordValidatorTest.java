@@ -44,13 +44,13 @@ public class PasswordValidatorTest {
     }
     @Test
     public void containsUpperCaseAndLowerCaseWhenInputStringOutputTrue() {
-        boolean actual = PasswordValidator.containsDigits("DanielPassword4");
+        boolean actual = PasswordValidator.containsUpperCaseAndLowerCase("DanielPassword4");
         boolean expected = true;
         assertEquals(expected, actual);
     }
     @Test
     public void containsUpperCaseAndLowerCaseWhenInputStringOutputFalse() {
-        boolean actual = PasswordValidator.containsDigits("daniel");
+        boolean actual = PasswordValidator.containsUpperCaseAndLowerCase("daniel");
         boolean expected = false;
         assertEquals(expected, actual);
     }
@@ -63,6 +63,18 @@ public class PasswordValidatorTest {
     @Test
     public void IsCommonPasswordWhenInputStringOutputFalse() throws IOException {
         boolean actual = PasswordValidator.isCommonPassword("Dirkules1234");
+        boolean expected = false;
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void containsSpecialCharacterWhenInputStringOutputFalse() throws IOException {
+        boolean actual = PasswordValidator.containsSpecialCharacter("!Dirkules?1234");
+        boolean expected = true;
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void containsSpecialCharacterWhenInputStringOutputTrue() throws IOException {
+        boolean actual = PasswordValidator.containsSpecialCharacter("Dirkules1234");
         boolean expected = false;
         assertEquals(expected, actual);
     }
