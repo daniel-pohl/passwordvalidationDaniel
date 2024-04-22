@@ -10,7 +10,7 @@ import java.util.List;
 
 public class PasswordValidator {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         //System.out.println(isCommonPassword("12345"));
     }
 
@@ -45,7 +45,7 @@ public class PasswordValidator {
         return false;
     }
 
-    public static boolean isCommonPassword(String password) throws IOException {
+    public static boolean isCommonPassword(String password) {
         List<String> wordList = new ArrayList<>();
         String jsonFilePath = "C:/NeueFische/passwordvalidationDaniel/src/passwords.json";
 

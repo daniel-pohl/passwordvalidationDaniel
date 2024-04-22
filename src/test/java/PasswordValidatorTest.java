@@ -67,13 +67,13 @@ public class PasswordValidatorTest {
         assertEquals(expected, actual);
     }
     @Test
-    public void containsSpecialCharacterWhenInputStringOutputFalse() throws IOException {
+    public void containsSpecialCharacterWhenInputStringOutputFalse(){
         boolean actual = PasswordValidator.containsSpecialCharacter("!Dirkules?1234");
         boolean expected = true;
         assertEquals(expected, actual);
     }
     @Test
-    public void containsSpecialCharacterWhenInputStringOutputTrue() throws IOException {
+    public void containsSpecialCharacterWhenInputStringOutputTrue(){
         boolean actual = PasswordValidator.containsSpecialCharacter("Dirkules1234");
         boolean expected = false;
         assertEquals(expected, actual);
