@@ -6,17 +6,15 @@ public class PasswordValidator {
     }
 
 
-//    public static boolean containsDigits(String password) {
-//      for (char c : password.toCharArray()) {
-//            if (Character.isDigit(c)) {
-//                return true;
-//            }
-//        }
-//        return false;
-//
-//    }
-//
-//
+    public static boolean containsDigits(String password) {
+      for (char c : password.toCharArray()) {
+            if (Character.isDigit(c)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 //    public static boolean containsUpperCaseAndLowerCase(String password) {
 //        // Implementierung der Überprüfung auf Groß- und Kleinbuchstaben hier
 //        // Rückgabetyp: boolean
