@@ -47,7 +47,7 @@ public class PasswordValidator {
 
     public static boolean isCommonPassword(String password) {
         List<String> wordList = new ArrayList<>();
-        String jsonFilePath = "C:/NeueFische/passwordvalidationDaniel/src/passwords.json";
+        String jsonFilePath = "src/passwords.json";
 
         try {
             String jsonContent = new String(Files.readAllBytes(Paths.get(jsonFilePath)));
